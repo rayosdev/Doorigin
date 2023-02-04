@@ -1,4 +1,4 @@
-extends AnimatedSprite
+extends Sprite
 
 
 const radius = 10

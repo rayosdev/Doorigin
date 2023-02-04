@@ -12,7 +12,7 @@ func add_resources(amount):
 
 
 var towers_placed:int = 0
-onready var price_of_tower:int = 0 setget set_price_of_tower, get_price_of_tower
+onready var price_of_tower:int = 2 setget set_price_of_tower, get_price_of_tower
 signal on_price_of_tower_change
 func place_tower():
 	towers_placed += 1
@@ -21,3 +21,4 @@ func get_price_of_tower(): return towers_placed
 func set_price_of_tower(new_price_of_tower):
 	emit_signal("on_price_of_tower_change", new_price_of_tower)
 	price_of_tower = new_price_of_tower
+

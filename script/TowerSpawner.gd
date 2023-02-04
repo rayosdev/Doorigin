@@ -1,8 +1,9 @@
 extends Node2D
 
-const Tower = preload("res://prefabs/Tower.tscn")
+const tower_prefab = preload("res://prefabs/Tower.tscn")
 
 func _ready():
+	Store.price_of_tower = 2
 	pass
 
 func _input(event):
@@ -16,7 +17,7 @@ func _input(event):
 func spawn_tower(position):
 	Store.resources -= Store.price_of_tower
 	Store.place_tower()
-	var tower = Tower.instance()
+	var tower = tower_prefab.instance()
 	tower.position = position
 	get_parent().add_child(tower)
 	print("current resources: " + str(Store.resources))
