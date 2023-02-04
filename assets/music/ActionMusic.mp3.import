@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ActionMusic.mp3-52ca82da6de9ab964d9414ed101ce0cc.mp3str"
+
+[deps]
+
+source_file="res://assets/music/ActionMusic.mp3"
+dest_files=[ "res://.import/ActionMusic.mp3-52ca82da6de9ab964d9414ed101ce0cc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
