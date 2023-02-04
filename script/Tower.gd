@@ -1,17 +1,14 @@
 extends AnimatedSprite
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+const radius = 10
+var upgrades = []
+var time_since_last_shot = Time.get_ticks_msec()
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	print("lol")
-	pass # Replace with function body.
+	print(time_since_last_shot)
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
