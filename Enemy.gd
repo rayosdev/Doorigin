@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(float) var MAX_SPEED = 105.0
+export(float) var MAX_SPEED = 50.0
 onready var navigation_agent = $NavigationAgent2D
 var velocity = Vector2.ZERO
 var last_move_velocity = Vector2.ZERO
@@ -41,6 +41,7 @@ func on_root_hurt():
 	wait_at_home = true
 
 func _on_Area2D_area_entered(_area):
+	print_debug("enemy retreat")
 	on_root_hurt()
 
 func _on_Timer_timeout():
