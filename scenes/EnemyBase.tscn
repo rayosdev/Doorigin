@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://script/EnemyBase.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/enemy/Base.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 97.2446, 386.743 )
+
+[node name="Base" type="Node2D"]
+position = Vector2( -383, 194 )
+script = ExtResource( 1 )
+FullCreepTarget = NodePath("DebugUpperAdvance")
+
+[node name="Base" type="Polygon2D" parent="."]
+position = Vector2( 7, -349 )
+rotation = 0.667791
+scale = Vector2( 0.993157, 0.985623 )
+offset = Vector2( 0, 0.03 )
+texture = ExtResource( 2 )
+texture_offset = Vector2( 0, 0.021 )
+skeleton = NodePath("../Skeleton2D")
+polygon = PoolVector2Array( 116.541, 152.615, 46.9427, 301.749, 549.685, 210.912, 614.782, 57.6852 )
+uv = PoolVector2Array( 1, 6, 0, 684, 761, 692, 758, 4 )
+bones = [ "Bone2D", PoolRealArray( 1, 0, 0, 1 ) ]
+
+[node name="DebugUpperAdvance" type="Position2D" parent="."]
+position = Vector2( 638, -288 )
+__meta__ = {
+"_gizmo_extents_": 84.6
+}
+
+[node name="BaseOrigin" type="Position2D" parent="."]
+position = Vector2( 95, 8 )
+__meta__ = {
+"_gizmo_extents_": 188.0
+}
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
+position = Vector2( 175, -22 )
+rotation = -0.593412
+rest = Transform2D( 0.829038, -0.559193, 0.559193, 0.829038, 74, 24 )
+default_length = 186.0
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Skeleton2D/Bone2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/Bone2D/KinematicBody2D" groups=["Enemy"]]
+position = Vector2( 58.5038, 38.849 )
+rotation = -0.511381
+shape = SubResource( 3 )
+
+[node name="SpawnLocations" type="Node2D" parent="Skeleton2D/Bone2D"]
+position = Vector2( -198.394, -86.7756 )
+rotation = 0.593412
+
+[node name="Position2D" type="Position2D" parent="Skeleton2D/Bone2D/SpawnLocations"]
+position = Vector2( 76, -148 )
+
+[node name="Position2D2" type="Position2D" parent="Skeleton2D/Bone2D/SpawnLocations"]
+position = Vector2( 151, -104 )
+
+[node name="Position2D3" type="Position2D" parent="Skeleton2D/Bone2D/SpawnLocations"]
+position = Vector2( 225, -59 )
+
+[node name="Position2D4" type="Position2D" parent="Skeleton2D/Bone2D/SpawnLocations"]
+position = Vector2( 319, -7 )
+
+[node name="Position2D5" type="Position2D" parent="Skeleton2D/Bone2D/SpawnLocations"]
+position = Vector2( 397, 47 )

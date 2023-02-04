@@ -7,7 +7,7 @@ func _ready():
 	pass
 
 func _input(event):
-	if event is InputEventMouseButton and event.pressed:
+	if event is InputEventMouseButton and event.pressed and Store.is_settled:
 		if (Store.resources >= Store.price_of_tower):
 			spawn_tower(get_global_mouse_position())
 		else:
