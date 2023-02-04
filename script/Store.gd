@@ -17,7 +17,7 @@ signal on_price_of_tower_change
 func place_tower():
 	towers_placed += 1
 	set_price_of_tower(2 + towers_placed)
-func get_price_of_tower(): return towers_placed
+func get_price_of_tower(): return price_of_tower
 func set_price_of_tower(new_price_of_tower):
 	emit_signal("on_price_of_tower_change", new_price_of_tower)
 	price_of_tower = new_price_of_tower
