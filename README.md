@@ -21,11 +21,13 @@ git clone https://github.com/rayosdev/Doorigin.git
 
 ## Workflow
 
-# 
+### colaboration
 
 [Trello](https://trello.com/invite/b/Z2K9tl1M/ATTI61be1dc19e4e839f99808f1945f02a27699FEFF7/welcome-board)
 
+### Art software
 
+[Pixelorama](https://github.com/Orama-Interactive/Pixelorama/releases/download/v0.10.3/Pixelorama.Windows-64bit.zip)
 
 
 
