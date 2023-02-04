@@ -13,7 +13,7 @@ onready var animation_player = $AnimationPlayer
 var animation_speed = 3
 var moving = false
 
-var tower = preload("res://GridBasedNodes/Tower.tscn")
+var tower = preload("res://assets/tile-resource/grid-based-nodes/Tower.tscn")
 var settled = false
 
 func _ready() -> void:

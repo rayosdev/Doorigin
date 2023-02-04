@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player.png-b39670065ec892dae68e779b9700f281.stex"
+path="res://.import/Creature.png-c8bb135fe02623a64529b5b6b08cd1aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GridBasedSprites/Player.png"
-dest_files=[ "res://.import/Player.png-b39670065ec892dae68e779b9700f281.stex" ]
+source_file="res://assets/tile-resource/grid-based-sprites/Creature.png"
+dest_files=[ "res://.import/Creature.png-c8bb135fe02623a64529b5b6b08cd1aa.stex" ]
 
 [params]
 

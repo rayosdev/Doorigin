@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://GridBasedNodes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://GridBasedScripts/Autumn.gd" type="Script" id=2]
-[ext_resource path="res://GridBasedTileset/Tileset.tres" type="TileSet" id=3]
-[ext_resource path="res://GridBasedScripts/Summer.gd" type="Script" id=4]
-[ext_resource path="res://GridBasedScripts/Spring.gd" type="Script" id=5]
-[ext_resource path="res://GridBasedScripts/Winter.gd" type="Script" id=6]
+[ext_resource path="res://assets/tile-resource/grid-based-nodes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/tile-resource/grid-based-scrips/Autumn.gd" type="Script" id=2]
+[ext_resource path="res://assets/tile-resource/grid-based-tileset/Tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://assets/tile-resource/grid-based-scrips/Summer.gd" type="Script" id=4]
+[ext_resource path="res://assets/tile-resource/grid-based-scrips/Spring.gd" type="Script" id=5]
+[ext_resource path="res://assets/tile-resource/grid-based-scrips/Winter.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
