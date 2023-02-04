@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Seasons.png-b1c539171c7eef0e049e986c1511ffd7.stex"
+path="res://.import/Seasons.png-1c51c2fdd801e3ba66e5c699e469286b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grid-based-sprites/Seasons.png"
-dest_files=[ "res://.import/Seasons.png-b1c539171c7eef0e049e986c1511ffd7.stex" ]
+source_file="res://assets/tile-resource/grid-based-sprites/Seasons.png"
+dest_files=[ "res://.import/Seasons.png-1c51c2fdd801e3ba66e5c699e469286b.stex" ]
 
 [params]
 
