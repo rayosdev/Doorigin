@@ -16,8 +16,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Store="*res://script/Store.gd"
-Utils="*res://script/Utils.gd"
+Store="*res://script/utils/Store.gd"
+Utils="*res://script/utils/Utils.gd"
 
 [display]
 
