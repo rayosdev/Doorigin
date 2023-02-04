@@ -20,5 +20,3 @@ func spawn_tower(position):
 	var tower = tower_prefab.instance()
 	tower.position = position
 	get_parent().add_child(tower)
-	print("current resources: " + str(Store.resources))
-	print("price of new tower: " + str(Store.price_of_tower))
