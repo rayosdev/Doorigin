@@ -1,6 +1,15 @@
 extends Node
 
 
+onready var is_settled:bool = false setget set_is_settled, get_is_settled
+signal on_is_settled_change
+func get_is_settled(): return is_settled
+func set_is_settled(new_is_settled):
+	emit_signal("on_is_settled_change", new_is_settled)
+	is_settled = new_is_settled
+func toggle_is_settled():
+	set_is_settled(!is_settled)
+
 onready var resources:int = 10 setget set_new_resource, get_resources
 signal on_resources_change
 func get_resources(): return resources
