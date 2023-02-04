@@ -1,6 +1,6 @@
 # Doorigin: the lost plain
 
-Stratigic tower defence game where you have to find back to your roots   
+Strategic tower defence game where you have to find back to your roots   
 
 
 
