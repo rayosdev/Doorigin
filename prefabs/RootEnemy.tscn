@@ -16,7 +16,6 @@ target_node = NodePath("DebugTarget2D")
 shape = SubResource( 1 )
 
 [node name="RootFollower" parent="." instance=ExtResource( 2 )]
-target_object = NodePath("../Area2D")
 
 [node name="DebugTarget2D" type="Position2D" parent="."]
 
