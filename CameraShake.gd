@@ -9,6 +9,7 @@ var elapsedtime = 0
 func _ready():
 	randomize()
 	curPos = offset
+# warning-ignore:return_value_discarded
 	Store.connect("camera_shake_signal", self, "camera_shake")
 
 func _process(delta):

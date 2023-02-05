@@ -12,15 +12,15 @@ var wait_at_home = true
 var waiting = false
 
 func _ready():
-	original_position = position
-	player = get_parent().find_node("Player")
+	original_position = get_parent().global_position
+	player = get_node("/root/Main/Player")
 	set_target_location(original_position)
 
 func set_target_location(target:Vector2) -> void:
 	navigation_agent.set_target_location(target)
 
 func _physics_process(_delta):
-	move_direction = position.direction_to(navigation_agent.get_next_location())
+	move_direction = global_position.direction_to(navigation_agent.get_next_location())
 	velocity = move_direction * MAX_SPEED
 	navigation_agent.set_velocity(velocity)
 	
@@ -37,6 +37,7 @@ func _arrived_at_location() -> bool:
 	return navigation_agent.is_navigation_finished()
 
 func on_root_hurt():
+	original_position = get_parent().global_position
 	set_target_location(original_position)
 	wait_at_home = true
 

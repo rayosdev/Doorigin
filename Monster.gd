@@ -14,6 +14,7 @@ func _ready():
 	move_direction += Vector2.UP * y_movement * speed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	if animation_state == 0:
 		animation_player.play("monster_default")
@@ -37,8 +38,6 @@ func _physics_process(delta):
 		move_direction = move_and_slide(move_direction)
 	else:
 		animation_state = 0
-
-
 
 func _on_Timer_timeout() -> void:
 	animation_state += 1

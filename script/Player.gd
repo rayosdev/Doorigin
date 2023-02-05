@@ -45,5 +45,7 @@ func _physics_process(_delta):
 func _arrived_at_location() -> bool:
 	return navigation_agent.is_navigation_finished()
 
-func _on_Area2D_area_entered(area:Area2D):
+func _on_HurtBox_area_entered(area:Area2D):
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://EndScreen.tscn")
+	print_debug("Player dead")
