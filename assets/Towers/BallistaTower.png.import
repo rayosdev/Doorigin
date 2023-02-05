@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BallistaTower.png-1e6c106e76ec908d0350181284f51194.stex"
+path="res://.import/BallistaTower.png-36f10a7008c17ad83756274b938d556f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/towers/BallistaTower.png"
-dest_files=[ "res://.import/BallistaTower.png-1e6c106e76ec908d0350181284f51194.stex" ]
+source_file="res://assets/Towers/BallistaTower.png"
+dest_files=[ "res://.import/BallistaTower.png-36f10a7008c17ad83756274b938d556f.stex" ]
 
 [params]
 

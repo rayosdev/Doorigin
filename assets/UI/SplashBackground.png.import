@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SplashBackground.png-e9b977bc1295cf9fa08bbc6ddd330541.stex"
+path="res://.import/SplashBackground.png-2899c99572a67fe7941cdc9bd6902176.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/SplashBackground.png"
-dest_files=[ "res://.import/SplashBackground.png-e9b977bc1295cf9fa08bbc6ddd330541.stex" ]
+source_file="res://assets/UI/SplashBackground.png"
+dest_files=[ "res://.import/SplashBackground.png-2899c99572a67fe7941cdc9bd6902176.stex" ]
 
 [params]
 
