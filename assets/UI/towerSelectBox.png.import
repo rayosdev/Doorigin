@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/towerSelectBox.png-b57d01286b985e9eb11c331794cc0550.stex"
+path="res://.import/towerSelectBox.png-f3f923d45441c464a9d08632c660012a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/towerSelectBox.png"
-dest_files=[ "res://.import/towerSelectBox.png-b57d01286b985e9eb11c331794cc0550.stex" ]
+source_file="res://assets/ui/towerSelectBox.png"
+dest_files=[ "res://.import/towerSelectBox.png-f3f923d45441c464a9d08632c660012a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EndGameMenu.png-242587d3931c15d98bda18167252f49c.stex"
+path="res://.import/Base.png-1d537c8fcff635ff62d5c384aeb996e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/EndGameMenu.png"
-dest_files=[ "res://.import/EndGameMenu.png-242587d3931c15d98bda18167252f49c.stex" ]
+source_file="res://assets/graphics/enemy/Base.png"
+dest_files=[ "res://.import/Base.png-1d537c8fcff635ff62d5c384aeb996e2.stex" ]
 
 [params]
 

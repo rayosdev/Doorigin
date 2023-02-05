@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mineralDisplayBox.png-dc8ac113799a82b133993a17fb478f1f.stex"
+path="res://.import/mineralDisplayBox.png-5817e0da28b52eda6b1db9b6e699f866.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/mineralDisplayBox.png"
-dest_files=[ "res://.import/mineralDisplayBox.png-dc8ac113799a82b133993a17fb478f1f.stex" ]
+source_file="res://assets/ui/mineralDisplayBox.png"
+dest_files=[ "res://.import/mineralDisplayBox.png-5817e0da28b52eda6b1db9b6e699f866.stex" ]
 
 [params]
 
