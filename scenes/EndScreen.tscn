@@ -147,6 +147,5 @@ valign = 1
 stream = ExtResource( 7 )
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/YourScore" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/PlayAgain" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/ExitGame" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/ExitGame" to="." method="_exit_game"]

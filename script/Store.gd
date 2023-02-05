@@ -38,5 +38,5 @@ func shake_camera():
 # warning-ignore:unused_signal
 signal player_direction
 # warning-ignore:unused_signal
-signal action_mode_changed
+signal shoot
 
