@@ -10,7 +10,7 @@
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 289, -98 )
-collision_layer = 0
+collision_layer = 32
 collision_mask = 0
 script = ExtResource( 1 )
 
