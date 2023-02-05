@@ -1,0 +1,189 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Monster.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/monster/monster_right_up.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/monster/monster_left_up.png" type="Texture" id=3]
+[ext_resource path="res://fog_of_war_sheet.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/monster/monster_left_down.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/monster/monster_normal.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/monster/monster_right_down.png" type="Texture" id=7]
+
+[sub_resource type="CircleShape2D" id=7]
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1920, 0, 1920, 1080 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3840, 0, 1920, 1080 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 5760, 0, 1920, 1080 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 7680, 0, 1920, 1080 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=14]
+resource_name = "fog"
+length = 2.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "monster_default"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonsterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "monster_left_down"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonsterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "monster_left_up"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonsterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "monster_right_down"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonsterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "monster_right_up"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonsterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 1171.5, 45 )
+
+[node name="Monster" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+disabled = true
+
+[node name="MonsterSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 15 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 13 )
+
+[node name="Fog" type="AnimationPlayer" parent="."]
+autoplay = "fog"
+anims/fog = SubResource( 14 )
+
+[node name="Monster" type="AnimationPlayer" parent="."]
+anims/monster_default = SubResource( 16 )
+anims/monster_left_down = SubResource( 17 )
+anims/monster_left_up = SubResource( 18 )
+anims/monster_right_down = SubResource( 19 )
+anims/monster_right_up = SubResource( 20 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 550.301, -215.004 )
+rotation = 0.729454
+shape = SubResource( 21 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

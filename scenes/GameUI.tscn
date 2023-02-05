@@ -32,3 +32,11 @@ margin_right = 503.0
 margin_bottom = 283.0
 custom_fonts/font = SubResource( 2 )
 text = "2"
+
+[node name="SettledText" type="Label" parent="."]
+margin_left = 392.0
+margin_top = 318.0
+margin_right = 505.0
+margin_bottom = 398.0
+custom_fonts/font = SubResource( 2 )
+text = "Not settled"
