@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(float) var MAX_SPEED = 20.0
+export(float) var MAX_SPEED = 40.0
 onready var navigation_agent = $NavigationAgent2D
 var velocity = Vector2.ZERO
 var last_move_velocity = Vector2.ZERO
@@ -15,6 +15,8 @@ func _ready():
 	original_position = get_parent().global_position
 	player = get_node("/root/Main/Player")
 	set_target_location(original_position)
+	
+	get_parent().get_node("RootFollower").connect("root_hit", self, "on_root_hurt")
 
 func set_target_location(target:Vector2) -> void:
 	navigation_agent.set_target_location(target)
@@ -40,10 +42,6 @@ func on_root_hurt():
 	original_position = get_parent().global_position
 	set_target_location(original_position)
 	wait_at_home = true
-
-func _on_Area2D_area_entered(_area):
-	print_debug("enemy retreat")
-	on_root_hurt()
 
 func _on_Timer_timeout():
 	set_target_location(player.position)

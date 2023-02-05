@@ -1,4 +1,6 @@
 extends Node2D
+# warning-ignore:unused_signal
+signal root_hit
 
 export(NodePath) var target_object
 onready var _target_object = get_node(target_object)
@@ -19,9 +21,11 @@ func move_to_target(target: Vector2) -> void:
 
 	# scale bones
 	for b in bones:
+# warning-ignore:return_value_discarded
 		tween.tween_property(b, "global_scale", Vector2(target_distance_mod,target_distance_mod), 0.1)
 
 	# Move the last bone to target
+# warning-ignore:return_value_discarded
 	tween.tween_property(bones[-1], "global_position", target, 0.1)
 
 	# root bone rotation
@@ -37,3 +41,8 @@ func _unhandled_input(event):
 
 func _on_UpdateTargetTimer_timeout():
 	move_to_target(_target_object.global_position)
+
+# warning-ignore:unused_argument
+func _on_Area2D_area_entered(area:Area2D):
+	print_debug(area.name)
+	emit_signal("root_hit")

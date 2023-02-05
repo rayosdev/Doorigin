@@ -1,7 +1,7 @@
 extends Sprite
 
 
-export var radius = 75
+export var radius = 500
 var upgrades = []
 var time_since_last_shot = Time.get_ticks_msec()
 const time_between_shots = 1000 #in ms
@@ -24,6 +24,11 @@ func shoot():
 
 func find_closest_enemy():
 	var enemies = get_tree().get_nodes_in_group("Enemies")
+	print_debug(enemies)
 	for enemy in enemies:
 		if position.distance_to(enemy.global_position) < radius:
 			return enemy
+
+
+func _on_Area2D_area_entered(area:Area2D):
+	queue_free()
