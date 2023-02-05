@@ -6,6 +6,8 @@ var velocity = Vector2.ZERO
 var last_move_velocity = Vector2.ZERO
 var move_direction = Vector2.ZERO
 
+var sprite
+
 func _ready():
 	set_target_location(position)
 
@@ -14,7 +16,19 @@ func _process(_delta):
 		set_target_location(get_position())
 		Store.toggle_is_settled()
 
+
 func set_target_location(target:Vector2) -> void:
+	var distanceToTravel = target - get_position()
+	if abs(distanceToTravel.x) > abs(distanceToTravel.y):
+		if (distanceToTravel.x < 0):
+			Store.emit_signal("player_direction", "left")
+		else:
+			Store.emit_signal("player_direction", "right")
+	else:
+		if (distanceToTravel.y < 0):
+			Store.emit_signal("player_direction", "up")
+		else:
+			Store.emit_signal("player_direction", "down")
 	navigation_agent.set_target_location(target)
 
 func _physics_process(_delta):

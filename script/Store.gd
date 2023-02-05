@@ -34,3 +34,4 @@ func set_price_of_tower(new_price_of_tower):
 signal camera_shake_signal
 func shake_camera():
 	emit_signal("camera_shake_signal")
+signal player_direction
