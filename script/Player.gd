@@ -45,3 +45,6 @@ func _physics_process(_delta):
 func _arrived_at_location() -> bool:
 	return navigation_agent.is_navigation_finished()
 
+func _on_Area2D_area_entered(area):
+	get_tree().change_scene("res://EndScreen.tscn")
+	
