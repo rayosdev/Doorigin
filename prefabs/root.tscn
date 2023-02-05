@@ -1,7 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/graphics/enemy/RootSprite1.png" type="Texture" id=1]
-[ext_resource path="res://script/RootEnemy.gd" type="Script" id=3]
+[ext_resource path="res://script/RootFollower.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 12, 55.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 12, 32.4335 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10, 58.2373 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10, 31.3376 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
@@ -588,7 +600,7 @@ tracks/23/keys = {
 }
 
 [node name="RootFollower" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 target_object = NodePath("debugTarget")
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -612,6 +624,15 @@ __meta__ = {
 "_edit_ik_": true
 }
 
+[node name="Area2D" type="Area2D" parent="Skeleton2D/upper"]
+position = Vector2( -1, 3 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Area2D"]
+position = Vector2( 3, 55 )
+shape = SubResource( 4 )
+
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/upper"]
 physics_interpolation_mode = 2
 position = Vector2( 8, 110 )
@@ -619,6 +640,15 @@ rest = Transform2D( 1, 0, 0, 1, 8, 110 )
 __meta__ = {
 "_edit_bone_": true
 }
+
+[node name="Area2D2" type="Area2D" parent="Skeleton2D/upper/Bone2D"]
+position = Vector2( -1, 2 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Area2D2"]
+position = Vector2( -5, 32 )
+shape = SubResource( 5 )
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/upper/Bone2D"]
 physics_interpolation_mode = 2
@@ -628,6 +658,17 @@ __meta__ = {
 "_edit_bone_": true
 }
 
+[node name="Area2D3" type="Area2D" parent="Skeleton2D/upper/Bone2D/Bone2D"]
+position = Vector2( 1, 3 )
+rotation = 0.115548
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Area2D3"]
+position = Vector2( 32.1234, 42.5804 )
+rotation = -0.661927
+shape = SubResource( 6 )
+
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/upper/Bone2D/Bone2D"]
 physics_interpolation_mode = 2
 position = Vector2( 56, 99 )
@@ -635,6 +676,17 @@ rest = Transform2D( 1, 0, 0, 1, 56, 99 )
 __meta__ = {
 "_edit_bone_": true
 }
+
+[node name="Area2D4" type="Area2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D"]
+position = Vector2( 2, 5 )
+rotation = 0.483456
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Area2D4"]
+position = Vector2( 16.3245, 20.7935 )
+rotation = -0.661927
+shape = SubResource( 7 )
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D"]
 physics_interpolation_mode = 2
@@ -644,6 +696,28 @@ __meta__ = {
 "_edit_bone_": true
 }
 
+[node name="Area2D5" type="Area2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D"]
+position = Vector2( 1, 6 )
+rotation = 0.483456
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Area2D5"]
+position = Vector2( 6.1758, 18.217 )
+rotation = -0.387108
+shape = SubResource( 7 )
+
+[node name="Area2D6" type="Area2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D"]
+position = Vector2( -2, 3 )
+rotation = 0.483456
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Area2D6"]
+position = Vector2( -11.9526, 28.8641 )
+rotation = 0.262992
+shape = SubResource( 7 )
+
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D"]
 physics_interpolation_mode = 2
 position = Vector2( -49, 46 )
@@ -651,6 +725,17 @@ rest = Transform2D( 1, 0, 0, 1, -49, 46 )
 __meta__ = {
 "_edit_bone_": true
 }
+
+[node name="Area2D7" type="Area2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D"]
+position = Vector2( 0, -1 )
+rotation = 0.483456
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Area2D7"]
+position = Vector2( -12.838, 29.3289 )
+rotation = 0.443545
+shape = SubResource( 7 )
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D"]
 physics_interpolation_mode = 2
@@ -660,11 +745,21 @@ __meta__ = {
 "_edit_bone_": true
 }
 
+[node name="Area2D8" type="Area2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D"]
+position = Vector2( 0, 1 )
+rotation = 0.483456
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Area2D8"]
+position = Vector2( -12.838, 29.3289 )
+rotation = 0.443545
+shape = SubResource( 7 )
+
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D"]
 physics_interpolation_mode = 2
 position = Vector2( -22, 21 )
 rotation = 2.64068
-scale = Vector2( 1, 1 )
 rest = Transform2D( -0.877146, 0.480223, -0.480223, -0.877146, -22, 21 )
 default_length = 31.0
 __meta__ = {
@@ -703,6 +798,17 @@ scale = Vector2( 1.209, 1 )
 __meta__ = {
 "_edit_bone_": true
 }
+
+[node name="Area2D9" type="Area2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D2"]
+position = Vector2( 0, 2 )
+rotation = 0.483456
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/upper/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D2/Area2D9"]
+position = Vector2( -12.838, 29.3289 )
+rotation = 0.443545
+shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton2D"]
 root_node = NodePath("../..")
