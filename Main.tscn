@@ -12,6 +12,8 @@
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 
+[node name="GameUI" parent="Camera2D" instance=ExtResource( 5 )]
+
 [node name="Map" parent="." instance=ExtResource( 1 )]
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
@@ -22,8 +24,6 @@ script = ExtResource( 6 )
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-
-[node name="GameUI" parent="." instance=ExtResource( 5 )]
 
 [node name="CameraFollowObject" parent="." instance=ExtResource( 8 )]
 
