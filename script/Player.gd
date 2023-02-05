@@ -6,6 +6,8 @@ var velocity = Vector2.ZERO
 var last_move_velocity = Vector2.ZERO
 var move_direction = Vector2.ZERO
 
+var sprite
+
 func _ready():
 	set_target_location(position)
 
