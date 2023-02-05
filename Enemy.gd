@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(float) var MAX_SPEED = 50.0
+export(float) var MAX_SPEED = 20.0
 onready var navigation_agent = $NavigationAgent2D
 var velocity = Vector2.ZERO
 var last_move_velocity = Vector2.ZERO
