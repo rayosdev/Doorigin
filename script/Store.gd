@@ -52,3 +52,8 @@ signal player_direction
 # warning-ignore:unused_signal
 signal shoot
 
+func reset_state_for_next_game():
+	set_new_resource(10)
+	set_price_of_tower(2)
+	towers_placed = 0
+

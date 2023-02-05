@@ -64,5 +64,6 @@ func _arrived_at_location() -> bool:
 func _on_HurtBox_area_entered(area:Area2D):
 # warning-ignore:return_value_discarded
 	get_tree().get_root().set_meta("score", Store.score)
+	Store.reset_state_for_next_game()
 	get_tree().change_scene("res://scenes/EndScreen.tscn")
 	print_debug("Player dead")
