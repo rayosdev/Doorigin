@@ -12,6 +12,7 @@ func _ready():
 	score_label.text = "Your Score :" + str(Store.score)
 
 func _on_PlayAgain_pressed():
+	Store.reset_state_for_next_game()
 	get_tree().change_scene("res://Main.tscn")
 
 func _on_ExitGame_pressed():
