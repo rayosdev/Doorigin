@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Kanontårn2.mp3-eb2b6a883a3d6ded5fef66379711447e.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Kanontårn2.mp3"
+dest_files=[ "res://.import/Kanontårn2.mp3-eb2b6a883a3d6ded5fef66379711447e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

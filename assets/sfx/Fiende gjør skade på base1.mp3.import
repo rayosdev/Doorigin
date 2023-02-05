@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fiende gjør skade på base1.mp3-3c6853b50ceda43403b1efcfc5ade58c.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Fiende gjør skade på base1.mp3"
+dest_files=[ "res://.import/Fiende gjør skade på base1.mp3-3c6853b50ceda43403b1efcfc5ade58c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

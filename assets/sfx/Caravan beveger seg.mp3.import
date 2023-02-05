@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Caravan beveger seg.mp3-7dcd00297f1f39e6bc61b94bedb8059a.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Caravan beveger seg.mp3"
+dest_files=[ "res://.import/Caravan beveger seg.mp3-7dcd00297f1f39e6bc61b94bedb8059a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

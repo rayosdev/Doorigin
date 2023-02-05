@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/towerSelectBox_withCost.png-efaa1070450eff9d8c29673c0921c2d1.stex"
+path="res://.import/towerSelectBox_withCost.png-19960d5bde215ac514bd69b44cd19334.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/towerSelectBox_withCost.png"
-dest_files=[ "res://.import/towerSelectBox_withCost.png-efaa1070450eff9d8c29673c0921c2d1.stex" ]
+source_file="res://assets/ui/towerSelectBox_withCost.png"
+dest_files=[ "res://.import/towerSelectBox_withCost.png-19960d5bde215ac514bd69b44cd19334.stex" ]
 
 [params]
 
