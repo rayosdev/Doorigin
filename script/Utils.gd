@@ -9,7 +9,9 @@ func make_dir(path:String, path_with_file = true) -> void:
 			if(item.find(".") and item.length() > 2):
 				path_file = item
 		var only_path = path.replace(path_file, "")
+# warning-ignore:return_value_discarded
 		Directory.new().make_dir_recursive(only_path)
+# warning-ignore:return_value_discarded
 	else: Directory.new().make_dir_recursive(path)
 
 
@@ -45,6 +47,7 @@ func ls(path, include_current_and_back = true) -> Array:
 	var dir = Directory.new()
 	dir.open(path)
 	dir.list_dir_begin()
+# warning-ignore:unassigned_variable
 	var dir_array:Array
 	var path_item = dir.get_next()
 	while path_item != "":

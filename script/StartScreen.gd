@@ -17,5 +17,6 @@ func _ready():
 
 func _on_TextureButton_pressed():
 	#load main scene 
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Main.tscn")
 	pass # Replace with function body.

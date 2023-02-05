@@ -11,8 +11,11 @@ func _ready():
 	on_resources_change(Store.resources)
 	on_price_of_tower_change(Store.price_of_tower)
 	on_is_settled_change(Store.is_settled)
+# warning-ignore:return_value_discarded
 	Store.connect("on_resources_change", self, "on_resources_change")
+# warning-ignore:return_value_discarded
 	Store.connect("on_price_of_tower_change", self, "on_price_of_tower_change")
+# warning-ignore:return_value_discarded
 	Store.connect("on_is_settled_change", self, "on_is_settled_change")
 	pass
 

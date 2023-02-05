@@ -20,6 +20,7 @@ func _ready():
 #	pass
 
 
+# warning-ignore:unused_argument
 func _on_Area2D_area_entered(area, map_piece):
 #	var map_piece = area.get_parent()
 	var new_position = map_piece.global_position

@@ -9,7 +9,9 @@ const base = preload("res://assets/Towers/Base.png")
 func _ready():
 	set_texture(horse_down)
 	self.scale = Vector2(5, 5)
+# warning-ignore:return_value_discarded
 	Store.connect("on_is_settled_change", self, "on_is_settled_change")
+# warning-ignore:return_value_discarded
 	Store.connect("player_direction", self, "player_direction")
 	pass
 
