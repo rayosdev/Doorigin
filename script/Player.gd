@@ -7,9 +7,25 @@ var last_move_velocity = Vector2.ZERO
 var move_direction = Vector2.ZERO
 
 var sprite
+var score_timer
 
 func _ready():
 	set_target_location(position)
+	# make a timer
+	score_timer = Timer.new()
+	# callback
+	score_timer.connect("timeout", self, "_on_score_timer_increment")
+	score_timer.wait_time = 3
+	score_timer.one_shot = false
+	add_child(score_timer)
+	score_timer.start()
+	
+func _on_score_timer_increment():
+	Store.add_resources(1)
+	print("Added one resource by timer!")
+	#add_score(1)
+
+
 
 func _process(_delta):
 	if Input.is_action_just_pressed("settle_base"):
@@ -47,5 +63,6 @@ func _arrived_at_location() -> bool:
 
 func _on_HurtBox_area_entered(area:Area2D):
 # warning-ignore:return_value_discarded
+	get_tree().get_root().set_meta("score", Store.score)
 	get_tree().change_scene("res://scenes/EndScreen.tscn")
 	print_debug("Player dead")

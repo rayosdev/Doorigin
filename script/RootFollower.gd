@@ -25,7 +25,7 @@ func move_to_target(target: Vector2) -> void:
 		tween.tween_property(b, "global_scale", Vector2(target_distance_mod,target_distance_mod), 0.1)
 
 	# Move the last bone to target
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	tween.tween_property(bones[-1], "global_position", target, 0.1)
 
 	# root bone rotation

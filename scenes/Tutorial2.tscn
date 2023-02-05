@@ -32,24 +32,23 @@ rect_scale = Vector2( 0.960219, 1 )
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 263.0
+margin_top = 290.0
 margin_right = 1407.0
-margin_bottom = 631.0
+margin_bottom = 605.0
 custom_fonts/font = SubResource( 1 )
 text = "
 
 The world is small. If you run far enough you will loop around it.
 The towers you built long ago will be there waiting for you.
 Eventually, you will overcome.
-
 "
 align = 1
 valign = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 635.0
+margin_top = 609.0
 margin_right = 1407.0
-margin_bottom = 756.0
+margin_bottom = 730.0
 alignment = 1
 
 [node name="PlayGameButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]

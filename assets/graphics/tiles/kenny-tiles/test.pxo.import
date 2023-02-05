@@ -1,0 +1,13 @@
+[remap]
+
+importer="com.technohacker.pixelorama"
+type="StreamTexture"
+path="res://.import/test.pxo-28517a00e6b8b4ebd0a0ceafd32f41b1.stex"
+
+[deps]
+
+source_file="res://assets/graphics/tiles/kenny-tiles/test.pxo"
+dest_files=[ "res://.import/test.pxo-28517a00e6b8b4ebd0a0ceafd32f41b1.stex" ]
+
+[params]
+
