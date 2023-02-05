@@ -9,16 +9,28 @@ func set_is_settled(new_is_settled):
 	is_settled = new_is_settled
 func toggle_is_settled():
 	set_is_settled(!is_settled)
-
+	
+onready var score:int = 10 setget set_new_score, get_score
+signal on_score_change
+func get_score(): return score
+func set_new_score(new_score):
+	emit_signal("on_score_change", new_score)
+	score = new_score
+func add_score(amount):
+	set_new_score(get_score() + amount)
+	
 onready var resources:int = 10 setget set_new_resource, get_resources
 signal on_resources_change
 func get_resources(): return resources
 func set_new_resource(new_resource):
 	emit_signal("on_resources_change", new_resource)
 	resources = new_resource
+	
 func add_resources(amount):
-	resources += amount
-
+	#resources += amount
+	set_new_resource(get_resources() + amount)
+	add_score(amount)
+	
 
 var towers_placed:int = 0
 onready var price_of_tower:int = 2 setget set_price_of_tower, get_price_of_tower

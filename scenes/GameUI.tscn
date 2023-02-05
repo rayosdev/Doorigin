@@ -1,42 +1,77 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://script/UI_Canvas.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Lexend-VariableFont_wght.ttf" type="DynamicFontData" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-size = 64
-font_data = ExtResource( 2 )
+[ext_resource path="res://assets/UI/ScoreBox.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/mineralDisplayBox.png" type="Texture" id=4]
+[ext_resource path="res://assets/UI/towerSelectBox.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=2]
 size = 64
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
 [node name="GameUI" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = -2.0
+margin_top = 3.0
+margin_right = 38.0
+margin_bottom = 43.0
+rect_scale = Vector2( 0.857468, 0.928319 )
 script = ExtResource( 1 )
+resources_label_node = NodePath("VBoxContainer/HBoxContainer/MineralDisplayBox/ResourcesText")
+price_of_tower_label_node = NodePath("VBoxContainer/HBoxContainer/TowerSelectBoxWithCost/PriceOfTowerText")
+score_label_node = NodePath("VBoxContainer/HBoxContainer/ScoreDisplayBox/ScoreText")
 
-[node name="ResourcesText" type="Label" parent="."]
-margin_left = 382.0
-margin_top = 171.0
-margin_right = 477.0
-margin_bottom = 196.0
-rect_min_size = Vector2( 400, 400 )
-custom_fonts/font = SubResource( 1 )
-text = "10"
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -20.0
+margin_right = 1920.0
+margin_bottom = 1060.0
+rect_min_size = Vector2( 1920, 1080 )
 
-[node name="PriceOfTowerText" type="Label" parent="."]
-margin_left = 390.0
-margin_top = 243.0
-margin_right = 503.0
-margin_bottom = 283.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1920.0
+
+[node name="TowerSelectBoxWithCost" type="Sprite" parent="VBoxContainer/HBoxContainer"]
+position = Vector2( 205.219, 82.0568 )
+scale = Vector2( 0.903107, 0.862773 )
+texture = ExtResource( 5 )
+
+[node name="PriceOfTowerText" type="Label" parent="VBoxContainer/HBoxContainer/TowerSelectBoxWithCost"]
+margin_left = 14.9195
+margin_top = -74.7279
+margin_right = 49.9195
+margin_bottom = 5.27207
 custom_fonts/font = SubResource( 2 )
 text = "2"
 
-[node name="SettledText" type="Label" parent="."]
-margin_left = 392.0
-margin_top = 318.0
-margin_right = 505.0
-margin_bottom = 398.0
-custom_fonts/font = SubResource( 2 )
-text = "Not settled"
+[node name="MineralDisplayBox" type="Sprite" parent="VBoxContainer/HBoxContainer"]
+position = Vector2( 141.995, 161.183 )
+texture = ExtResource( 4 )
+
+[node name="ResourcesText" type="Label" parent="VBoxContainer/HBoxContainer/MineralDisplayBox"]
+margin_left = -100.0
+margin_top = -45.0
+margin_right = -29.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 50, 50 )
+custom_fonts/font = SubResource( 1 )
+text = "10"
+
+[node name="ScoreDisplayBox" type="Sprite" parent="VBoxContainer/HBoxContainer"]
+position = Vector2( 594.926, 52.7508 )
+scale = Vector2( 0.965611, 1.00711 )
+texture = ExtResource( 3 )
+
+[node name="ScoreText" type="Label" parent="VBoxContainer/HBoxContainer/ScoreDisplayBox"]
+margin_left = -7.51355
+margin_top = -41.7451
+margin_right = 63.4865
+margin_bottom = 38.2549
+rect_min_size = Vector2( 50, 50 )
+custom_fonts/font = SubResource( 1 )
+text = "10"

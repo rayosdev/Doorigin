@@ -13,9 +13,18 @@
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 
-[node name="GameUI" parent="Camera2D" instance=ExtResource( 5 )]
+[node name="Control" type="Control" parent="Camera2D"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="GameUI" parent="Camera2D/Control" instance=ExtResource( 5 )]
+margin_left = -954.0
+margin_top = -544.0
+margin_right = -914.0
+margin_bottom = -504.0
 
 [node name="Map" parent="." instance=ExtResource( 1 )]
+z_index = -88
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
@@ -23,8 +32,10 @@
 script = ExtResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -302, 178 )
 
 [node name="Monster" parent="." instance=ExtResource( 8 )]
+z_index = -51
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Monster"]
 remote_path = NodePath("../../Camera2D")
