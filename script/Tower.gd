@@ -16,6 +16,7 @@ func _process(_delta):
 func shoot():
 	var enemy = find_closest_enemy()
 	if enemy:
+		Store.emit_signal("shoot")
 		var projectile_instance = projectile.instance()
 		self.get_parent().add_child(projectile_instance)
 		projectile_instance.position = position
