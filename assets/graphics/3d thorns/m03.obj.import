@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/m03.obj-5643e187e7b15f89ecd14f844a0c3100.mesh"
+
+[deps]
+
+files=[ "res://.import/m03.obj-5643e187e7b15f89ecd14f844a0c3100.mesh" ]
+
+source_file="res://assets/graphics/3d thorns/m03.obj"
+dest_files=[ "res://.import/m03.obj-5643e187e7b15f89ecd14f844a0c3100.mesh", "res://.import/m03.obj-5643e187e7b15f89ecd14f844a0c3100.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

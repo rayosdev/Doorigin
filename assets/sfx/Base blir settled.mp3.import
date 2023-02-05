@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Base blir settled.mp3-b5c59c9c4212054f5d3036b65cf3f717.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Base blir settled.mp3"
+dest_files=[ "res://.import/Base blir settled.mp3-b5c59c9c4212054f5d3036b65cf3f717.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

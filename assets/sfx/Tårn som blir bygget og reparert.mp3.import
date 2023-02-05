@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tårn som blir bygget og reparert.mp3-4a0169a6ac3f2cb8dfb28496f3ffb968.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Tårn som blir bygget og reparert.mp3"
+dest_files=[ "res://.import/Tårn som blir bygget og reparert.mp3-4a0169a6ac3f2cb8dfb28496f3ffb968.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

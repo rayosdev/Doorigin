@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fiende ødelegger base.mp3-69ea3c69c59d8551ca4dc9b6b584d8d8.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Fiende ødelegger base.mp3"
+dest_files=[ "res://.import/Fiende ødelegger base.mp3-69ea3c69c59d8551ca4dc9b6b584d8d8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
