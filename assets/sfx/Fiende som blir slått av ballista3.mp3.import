@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fiende som blir slått av ballista3.mp3-48049b5fe24d3ee7898fdffc3a78709e.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Fiende som blir slått av ballista3.mp3"
+dest_files=[ "res://.import/Fiende som blir slått av ballista3.mp3-48049b5fe24d3ee7898fdffc3a78709e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

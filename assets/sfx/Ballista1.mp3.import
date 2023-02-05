@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ballista1.mp3-f2cdcad3751eb7001c0e5b4f5a0a6673.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Ballista1.mp3"
+dest_files=[ "res://.import/Ballista1.mp3-f2cdcad3751eb7001c0e5b4f5a0a6673.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
