@@ -4,7 +4,7 @@ extends Sprite
 export var radius = 500
 var upgrades = []
 var time_since_last_shot = Time.get_ticks_msec()
-const time_between_shots = 1000 #in ms
+const time_between_shots = 2000 #in ms
 
 var projectile = preload("res://prefabs/TowerProjectile.tscn")
 
