@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Monster.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/monster/monster_right_up.png" type="Texture" id=2]
@@ -151,6 +151,9 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 1171.5, 45 )
 
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 975.5, 50.5 )
+
 [node name="Monster" type="KinematicBody2D"]
 collision_layer = 0
 collision_mask = 32
@@ -185,5 +188,15 @@ autostart = true
 position = Vector2( 550.301, -215.004 )
 rotation = 0.729454
 shape = SubResource( 21 )
+
+[node name="PlayerKillZone" type="Area2D" parent="."]
+position = Vector2( -1245, -534 )
+rotation = 0.782845
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerKillZone"]
+position = Vector2( 965.5, 40.5 )
+shape = SubResource( 22 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
