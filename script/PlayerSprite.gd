@@ -32,4 +32,3 @@ func player_direction(direction):
 			set_texture(horse_down)
 		"up":
 			set_texture(horse_up)
-	print(direction)

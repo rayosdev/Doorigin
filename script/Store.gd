@@ -32,5 +32,3 @@ func set_price_of_tower(new_price_of_tower):
 	price_of_tower = new_price_of_tower
 
 signal player_direction
-func emit_player_direction(direction):
-	emit_signal("player_direction", direction)
