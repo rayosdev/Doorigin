@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ScoreBox.png-b404ce809d34c3e30888236eac5f7cc9.stex"
+path="res://.import/ScoreBox.png-204c563118dc70e0b9340291847abe79.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/ScoreBox.png"
-dest_files=[ "res://.import/ScoreBox.png-b404ce809d34c3e30888236eac5f7cc9.stex" ]
+source_file="res://assets/ui/ScoreBox.png"
+dest_files=[ "res://.import/ScoreBox.png-204c563118dc70e0b9340291847abe79.stex" ]
 
 [params]
 
